@@ -1,0 +1,7 @@
+--ignore-dir=.idea
+--ignore-dir=node_modules
+--type-add=ruby=.haml
+--type-add=html=.ejs
+--type-add=css=.sass,.scss
+--smart-case
+--known-types

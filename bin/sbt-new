@@ -1,0 +1,11 @@
+#!/bin/sh
+mkdir -p $1/src/main/resources
+mkdir -p $1/src/main/scala
+mkdir -p $1/src/main/java
+
+mkdir -p $1/test/main/resources
+mkdir -p $1/test/main/scala
+mkdir -p $1/test/main/java
+
+touch $1/build.sbt
+

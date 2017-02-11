@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'json'
+require 'awesome_print'
+
+jstring = ARGF.read
+doc = JSON.parse(jstring)
+ap doc

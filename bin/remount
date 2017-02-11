@@ -1,0 +1,13 @@
+#!/bin/sh
+if [[ -n `mount | grep lc-dev.back` ]]
+then
+  diskutil unmount force $HOME/remote_fs/lc-dev.back
+fi
+
+if [[ -n `mount | grep lc-dev.front` ]]
+then
+  diskutil unmount force $HOME/remote_fs/lc-dev.front
+fi
+
+sshfs back: /Users/synapse/remote_fs/lc-dev.back -o sshfs_sync -o cache=no
+sshfs front: /Users/synapse/remote_fs/lc-dev.front -o sshfs_sync -o cache=no

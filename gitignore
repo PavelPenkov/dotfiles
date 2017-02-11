@@ -1,0 +1,17 @@
+#Mac
+.DS_Store
+
+#Vim
+*.swp
+*~
+
+#Python
+*.pyc
+
+#Erlang
+*.beam
+
+.agignore
+tags
+.starscope.db
+cscope.out

@@ -1,0 +1,26 @@
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  UseCache: false
+  TargetRubyVersion: 2.3
+Style/Documentation:
+  Enabled: false
+Style/AsciiComments:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Metrics/LineLength:
+  Max: 255
+Metrics/MethodLength:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: false
+Style/NumericLiterals:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/Lambda:
+  Enabled: false
