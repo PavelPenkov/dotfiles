@@ -8,8 +8,10 @@ set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
+set cursorline
+set noswapfile
 
-execute pathogen#infect() 
+execute pathogen#infect()
 filetype on
 filetype plugin indent on
 syntax on
@@ -46,9 +48,9 @@ set smarttab
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
-if executable('ag')
+if executable('/usr/bin/ag')
   " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
+  set grepprg=/usr/bin/ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag -l --nocolor -g "" %s'
   let g:ctrlp_use_caching = 0
 endif
@@ -70,13 +72,6 @@ set complete=.,w,t
 
 " Tags
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-
-" Cucumber navigation commands
-autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
-autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
-" :Cuc my text (no quotes) -> runs cucumber scenarios containing "my text"
-command! -nargs=+ Cuc :!ack-grep --no-heading --no-break <q-args> | cut -d':' -f1,2 | xargs bundle exec cucumber --no-color
-
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
@@ -140,10 +135,14 @@ endif
 set re=1
 
 " Syntastic
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_javascript_checkers = []
 let g:syntastic_check_on_wq=0
 let g:syntastic_enable_highlighting=1
+let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
 
 " NERDCommenter
 let NERDSpaceDelims=1
+
+" Tsuquyomi
+let g:tsuquyomi_disable_quickfix = 1
