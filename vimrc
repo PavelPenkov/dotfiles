@@ -50,7 +50,7 @@ set list listchars=tab:»·,trail:·
 
 if executable('/usr/bin/ag')
   " Use Ag over Grep
-  set grepprg=/usr/bin/ag\ --nogroup\ --nocolor
+  let g:ackprg = 'ag --vimgrep'
   let g:ctrlp_user_command = 'ag -l --nocolor -g "" %s'
   let g:ctrlp_use_caching = 0
 endif
@@ -146,3 +146,6 @@ let NERDSpaceDelims=1
 
 " Tsuquyomi
 let g:tsuquyomi_disable_quickfix = 1
+let g:tsuquyomi_disable_default_mappings = 1
+autocmd FileType typescript nmap <buffer> <Leader>] <Plug>(TsuDefinition)
+autocmd FileType typescript nmap <buffer> <Leader>t <Plug>(TsuGoBack)
