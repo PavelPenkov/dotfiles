@@ -28,9 +28,6 @@
 [submodule "vim/bundle/vim-fugitive"]
 	path = vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim-javascript"]
-	path = vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
 [submodule "vim/bundle/vim-scala"]
 	path = vim/bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
@@ -52,6 +49,6 @@
 [submodule "vim/bundle/tsuquyomi"]
 	path = vim/bundle/tsuquyomi
 	url = https://github.com/Quramy/tsuquyomi.git
-[submodule "ack.vim"]
-	path = ack.vim
+[submodule "vim/bundle/ack-vim"]
+	path = vim/bundle/ack-vim
 	url = https://github.com/mileszs/ack.vim.git

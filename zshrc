@@ -73,6 +73,8 @@ alias sspec='bundle exec spring rspec'
 alias sserver='bundle exec rails server'
 alias sconsole='bundle exec spring rails console'
 alias sqlplus="rlwrap -i -f ~/.sqlplus_history -H ~/.sqlplus_history -s 30000 sqlplus"
+alias dce="docker-compose exec"
+alias dcr="docker-compose run"
 
 hash pbcopy &> /dev/null
 if [ $? -eq 1 ]; then
@@ -114,3 +116,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

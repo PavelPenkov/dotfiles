@@ -23,7 +23,7 @@ editor = /usr/bin/vim
 [merge]
 	tool = kdiff3
 [diff]
-	tool = gvimdiff
+	tool = kdiff3
 [difftool "kdiff3"]
   path = /usr/bin/kdiff3
   trustExitCode = false
@@ -35,7 +35,7 @@ editor = /usr/bin/vim
 [mergetool "idea"]
   cmd = "idea merge \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\""
 [mergetool]
-  keepBackup = false
+	keepBackup = false
 	prompt = false
 [difftool]
   prompt = false
