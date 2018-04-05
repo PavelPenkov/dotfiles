@@ -40,7 +40,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails heroku git-flow ubuntu)
+plugins=(git rails heroku git-flow)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,3 +117,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
+
+nvm use stable > /dev/null

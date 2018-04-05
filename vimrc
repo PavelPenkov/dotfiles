@@ -51,7 +51,7 @@ set list listchars=tab:»·,trail:·
 if executable('/usr/bin/ag')
   " Use Ag over Grep
   let g:ackprg = 'ag --vimgrep'
-  let g:ctrlp_user_command = 'ag -l --nocolor -g "" %s'
+  let g:ctrlp_user_command = 'ag -l -p .ignore --nocolor -g "" %s'
   let g:ctrlp_use_caching = 0
 endif
 
@@ -136,6 +136,8 @@ set re=1
 
 " Syntastic
 let g:syntastic_ruby_checkers = ['mri']
+let g:syntastic_coffee_checkers = ['coffee']
+
 let g:syntastic_javascript_checkers = []
 let g:syntastic_check_on_wq=0
 let g:syntastic_enable_highlighting=1
