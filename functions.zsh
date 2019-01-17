@@ -24,3 +24,13 @@ function copy_password()
 {
   security find-generic-password -w -s $1 2>&1 | tr -d '\n' | pbcopy
 }
+
+function newpy()
+{
+  if [ ! -d $1 ]
+  then
+    mkdir -p $1
+  fi
+  cd $1
+  virtualenv env && echo 'env/' > .gitignore && echo 'env/' > .ignore && source env/bin/activate
+}

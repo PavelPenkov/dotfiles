@@ -1,2 +1,0 @@
-#!/bin/sh
-java -jar /home/synapse/.conscript/sbt-launch.jar @/home/synapse/.conscript/n8han/conscript/cs/launchconfig "$@"

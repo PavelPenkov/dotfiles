@@ -48,7 +48,7 @@ set smarttab
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
 
-if executable('/usr/bin/ag')
+if executable('ag')
   " Use Ag over Grep
   let g:ackprg = 'ag --vimgrep'
   let g:ctrlp_user_command = 'ag -l -p .ignore --nocolor -g "" %s'
@@ -91,6 +91,8 @@ let g:ctrlp_regexp = 1
 
 " PHP files fuck yeah!
 autocmd FileType php setlocal shiftwidth=4 tabstop=4 sts=0 noexpandtab nolist
+" Ozon's Python
+" autocmd FileType python setlocal shiftwidth=2 tabstop=2 expandtab nolist
 " ActionScript
 autocmd FileType actionscript setlocal sts=4 ai
 au BufNewFile,BufRead  *.as set filetype=actionscript
@@ -142,6 +144,9 @@ let g:syntastic_javascript_checkers = []
 let g:syntastic_check_on_wq=0
 let g:syntastic_enable_highlighting=1
 let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+let g:syntastic_python_flake8_args='--ignore=E501,E126,E123,E116,E128'
 
 " NERDCommenter
 let NERDSpaceDelims=1

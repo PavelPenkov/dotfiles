@@ -16,3 +16,5 @@ tags
 .starscope.db
 cscope.out
 .ignore
+
+.idea/

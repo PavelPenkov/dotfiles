@@ -6,7 +6,7 @@ branch = auto
 name = Pavel Penkov
 email = ebonfortress@gmail.com
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/synapse/.gitignore
 editor = /usr/bin/vim
 [github]
 	user = PavelPenkov
@@ -25,10 +25,10 @@ editor = /usr/bin/vim
 [diff]
 	tool = kdiff3
 [difftool "kdiff3"]
-  path = /usr/bin/kdiff3
+  path = /usr/local/bin/kdiff3
   trustExitCode = false
 [mergetool "kdiff3"]
-  path = /usr/bin/kdiff3
+  path = /usr/local/bin/kdiff3
   trustExitCode = false
 [difftool "idea"]
   cmd = "idea diff \"$LOCAL\" \"$REMOTE\""
@@ -47,3 +47,9 @@ editor = /usr/bin/vim
   a = add .
   pr = pull --rebase
   r = rebase
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

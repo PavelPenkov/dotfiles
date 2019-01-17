@@ -120,4 +120,4 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
-nvm use stable > /dev/null
+export HOMEBREW_NO_AUTO_UPDATE=1
