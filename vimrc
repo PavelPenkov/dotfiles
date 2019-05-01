@@ -146,7 +146,7 @@ let g:syntastic_enable_highlighting=1
 let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_python_exec = '/usr/local/bin/python3'
-let g:syntastic_python_flake8_args='--ignore=E501,E126,E123,E116,E128'
+let g:syntastic_python_flake8_args='--ignore=E501,E126,E123,E116,E128,F401'
 
 " NERDCommenter
 let NERDSpaceDelims=1

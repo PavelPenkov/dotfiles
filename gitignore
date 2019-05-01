@@ -7,6 +7,7 @@
 
 #Python
 *.pyc
+.mypy_cache/
 
 #Erlang
 *.beam
@@ -18,3 +19,4 @@ cscope.out
 .ignore
 
 .idea/
+.current_task

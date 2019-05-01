@@ -21,7 +21,7 @@ editor = /usr/bin/vim
 [push]
 	default = simple
 [merge]
-	tool = kdiff3
+	tool = smerge
 [diff]
 	tool = kdiff3
 [difftool "kdiff3"]
@@ -31,7 +31,7 @@ editor = /usr/bin/vim
   path = /usr/local/bin/kdiff3
   trustExitCode = false
 [difftool "idea"]
-  cmd = "idea diff \"$LOCAL\" \"$REMOTE\""
+  cmd = "/usr/local/bin/idea diff \"$LOCAL\" \"$REMOTE\""
 [mergetool "idea"]
   cmd = "idea merge \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\""
 [mergetool]
@@ -52,4 +52,9 @@ editor = /usr/bin/vim
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[url "git@gitlab.ozon.ru:"]
+insteadOf = https://gitlab.ozon.ru/
+[mergetool "smerge"]
+	cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
 	trustExitCode = true

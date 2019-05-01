@@ -121,3 +121,4 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
 export HOMEBREW_NO_AUTO_UPDATE=1
+export LC_ALL=en_US.UTF-8
